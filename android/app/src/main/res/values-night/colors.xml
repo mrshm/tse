@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#0B0D10</color>
+    <color name="surface">#15191F</color>
+    <color name="surface_2">#1D232B</color>
+    <color name="border">#262D37</color>
+    <color name="text_primary">#E9EDF3</color>
+    <color name="text_secondary">#A6B0BE</color>
+    <color name="text_muted">#7A8493</color>
+    <color name="primary">#4D8BFF</color>
+    <color name="primary_ink">#06101F</color>
+    <color name="good">#3FCB92</color>
+    <color name="good_bg">#12291F</color>
+    <color name="bad">#FF7A6E</color>
+    <color name="bad_bg">#2B1614</color>
+    <color name="warn">#E2B45A</color>
+    <color name="warn_bg">#2A2113</color>
+    <color name="gold">#E8B34B</color>
+</resources>

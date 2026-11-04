@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tse-core"
+version = "0.1.0"
+description = "موتور داده، اسکن و بک‌تست بورس تهران (TSETMC)"
+readme = { text = "هستهٔ پایتونی پروژهٔ tse-tools: کلاینت TSETMC، امتیازدهی، برگهٔ سفارش، بک‌تست، دفتر و ریسک.", content-type = "text/plain" }
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "jdatetime>=4.0",
+    "certifi",
+]
+
+[tool.setuptools]
+packages = ["tse"]

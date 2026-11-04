@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_today" android:icon="@drawable/ic_today"
+        android:title="@string/tab_today" />
+    <item android:id="@+id/nav_scan" android:icon="@drawable/ic_scan"
+        android:title="@string/tab_scan" />
+    <item android:id="@+id/nav_plan" android:icon="@drawable/ic_order"
+        android:title="@string/tab_plan" />
+    <item android:id="@+id/nav_journal" android:icon="@drawable/ic_journal"
+        android:title="@string/tab_journal" />
+    <item android:id="@+id/nav_risk" android:icon="@drawable/ic_risk"
+        android:title="@string/tab_risk" />
+</menu>

@@ -1,0 +1,39 @@
+# ── داده و خروجی‌های اجرا ───────────────────────────────────────────────────
+# کش TSETMC، JSONهای آخرین اجرا، دفتر معاملات
+/data/
+# HTMLهای ساخته‌شده (index.html و گزارش‌ها)
+/web/out/
+*.log
+
+# ── پایتون ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# ── اندروید: خروجی ساخت و تنظیمات محلی ────────────────────────────────────
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/keystore.properties
+android/keystore/*.jks
+android/.vscode/
+android/app/src/main/python/status.json
+
+# کد پایتون داخل APK با tools/sync_src.sh از core/ و web/ ساخته می‌شود
+android/app/src/main/python/tse/
+android/app/src/main/python/web/
+android/app/src/main/python/run_*.py
+
+# ── خروجی نصبی ─────────────────────────────────────────────────────────────
+/dist/
+*.apk
+
+# ── ادیتور و سیستم ─────────────────────────────────────────────────────────
+.idea/
+.DS_Store
+Thumbs.db
+*.swp

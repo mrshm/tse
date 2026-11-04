@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">بورس تهران</string>
+
+    <string name="sync">به‌روزرسانی</string>
+    <string name="syncing">در حال به‌روزرسانی…</string>
+    <string name="sync_title">به‌روزرسانی داده‌ها</string>
+    <string name="sync_hint">اسکن بازار، ساخت برگهٔ سفارش و تحلیل ریسک — معمولاً یک تا سه دقیقه.</string>
+    <string name="sync_full_hint">حالت کامل شامل بک‌تست است و ممکن است ده‌ها دقیقه طول بکشد.</string>
+    <string name="sync_done">داده‌ها به‌روز شد</string>
+    <string name="sync_failed">به‌روزرسانی ناموفق بود</string>
+    <string name="sync_retry">تلاش دوباره</string>
+    <string name="sync_full">اجرای کامل (بک‌تست و راه‌رونده)</string>
+    <string name="close">بستن</string>
+    <string name="cancel">انصراف</string>
+
+    <string name="tab_today">امروز</string>
+    <string name="tab_scan">اسکن</string>
+    <string name="tab_plan">برگه</string>
+    <string name="tab_journal">دفتر</string>
+    <string name="tab_risk">ریسک</string>
+
+    <string name="no_data_title">هنوز داده‌ای وجود ندارد</string>
+    <string name="no_data_body">برای دریافت داده‌ها دکمهٔ «به‌روزرسانی» را بزنید.</string>
+
+    <string name="market_index">شاخص کل</string>
+    <string name="market_value">ارزش معاملات</string>
+    <string name="breadth">بازار</string>
+    <string name="last_update">آخرین به‌روزرسانی</string>
+    <string name="no_data_short">بدون داده</string>
+</resources>
