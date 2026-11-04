@@ -4,7 +4,8 @@ set -uo pipefail
 
 ADB=/home/mrshm/android-sdk/platform-tools/adb
 PKG=com.tse.tools
-APK=${1:-/home/mrshm/tse-android/app/build/outputs/apk/debug/app-debug.apk}
+ANDROID="$(cd "$(dirname "$0")/.." && pwd)"
+APK=${1:-"$ANDROID/app/build/outputs/apk/debug/app-debug.apk"}
 
 echo "== install $APK"
 "$ADB" install -r -g "$APK" || exit 1
