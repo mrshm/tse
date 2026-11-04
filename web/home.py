@@ -150,9 +150,9 @@ __EXTRA__
           <div class="card">
             <div class="card-head"><h2>به‌روزرسانی</h2>
               <span class="hint">به ترتیب</span></div>
-            <div class="cmd">python run_daily.py</div>
-            <div class="cmd">python run_journal.py open <span class="c"># بعد از خرید</span></div>
-            <div class="cmd">python run_journal.py status <span class="c"># هر روز</span></div>
+            <div class="cmd">./tse.sh</div>
+            <div class="cmd">./tse.sh journal open <span class="c"># بعد از خرید</span></div>
+            <div class="cmd">./tse.sh journal status <span class="c"># هر روز</span></div>
             <p class="assume" style="margin:10px 0 0;font-size:12px;color:var(--text-secondary)">
               این صفحه خودش به بازار وصل نمی‌شود؛ اعداد همان چیزی است که آخرین
               اجرای ابزارها ذخیره کرده‌اند.</p>
@@ -189,20 +189,20 @@ function renderBanners() {
     const list = a.map(x => `${x.symbol} (${x.text})`).join("، ");
     out.push([`<span class="ic">⛔</span>`,
       `<b>${a.length} پوزیشن نیاز به اقدام دارد:</b> ${list}. ` +
-      `با <code>python run_journal.py status</code> ببینید.`, "bad"]);
+      `با <code>./tse.sh journal status</code> ببینید.`, "bad"]);
   }
   const p = DATA.plan;
   if (!p) {
     out.push([`<span class="ic">📄</span>`,
-      `برگهٔ سفارشی وجود ندارد. <b>python run_plan.py</b> را اجرا کنید.`, "warn"]);
+      `برگهٔ سفارشی وجود ندارد. <b>./tse.sh plan</b> را اجرا کنید.`, "warn"]);
   } else if (DATA.plan_stale) {
     out.push([`<span class="ic">🕒</span>`,
       `دادهٔ اسکنِ برگه مال <b>${p.source_date_fa || "—"}</b> است، نه امروز. ` +
-      `قبل از معامله <b>python run_scan.py</b> و بعد <b>python run_plan.py</b>.`, "warn"]);
+      `قبل از معامله <b>./tse.sh scan</b> و بعد <b>./tse.sh plan</b>.`, "warn"]);
   }
   if (!DATA.market) {
     out.push([`<span class="ic">📊</span>`,
-      `اسکن امروز موجود نیست. <b>python run_scan.py</b>`, "warn"]);
+      `اسکن امروز موجود نیست. <b>./tse.sh scan</b>`, "warn"]);
   }
   $("#banners").innerHTML = out.map(([ic, html, k]) =>
     `<div class="banner ${k}">${ic}<div>${html}</div></div>`).join("");
@@ -306,7 +306,7 @@ function renderToday() {
       `${cfg.positions || 0} سهم · ریسک ${bdi(cfg.risk_pct || 0)}٪ هر معامله` +
       (p.stale ? ` · <b class="down">دادهٔ قدیمی</b>` : "");
   } else {
-    $("#orders").innerHTML = empty("برگه‌ای برای امروز ساخته نشده است.", "python run_plan.py");
+    $("#orders").innerHTML = empty("برگه‌ای برای امروز ساخته نشده است.", "./tse.sh plan");
     $("#planHint").textContent = "—";
   }
 
@@ -318,7 +318,7 @@ function renderToday() {
   } else {
     $("#positions").innerHTML = empty(
       "هیچ پوزیشن بازی ثبت نشده. سفارش‌های بالا فقط پیشنهادند؛ بعد از خرید ثبتشان کنید.",
-      "python run_journal.py open");
+      "./tse.sh journal open");
     $("#posHint").textContent = "—";
   }
 
@@ -338,7 +338,7 @@ function renderToday() {
         نرخ برد و R از ${r.source || "پیش‌فرض"}</p>`;
     $("#riskHint").textContent = r.generated_at_fa || "";
   } else {
-    $("#riskBox").innerHTML = empty("گزارش ریسک ساخته نشده.", "python run_risk.py");
+    $("#riskBox").innerHTML = empty("گزارش ریسک ساخته نشده.", "./tse.sh risk");
     $("#riskHint").textContent = "—";
   }
 }
@@ -365,7 +365,7 @@ function renderJournal() {
 
   $("#jOpen").innerHTML = (j.positions && j.positions.length)
     ? posTable(j)
-    : empty("پوزیشن بازی نیست.", "python run_journal.py open");
+    : empty("پوزیشن بازی نیست.", "./tse.sh journal open");
   $("#jOpenHint").textContent = j.positions && j.positions.length
     ? `${j.positions.length} پوزیشن` : "—";
 
