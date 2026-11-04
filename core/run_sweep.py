@@ -2,9 +2,9 @@
 """جست‌وجوی پارامتر استراتژی: اجرای چند پیکربندی روی یک پنل و مقایسهٔ نتیجه.
 
 مثال:
-    python run_sweep.py --symbols 300 --days 450
-    python run_sweep.py --top 3,5,8 --hold 5,10,20,40 --target 0,2.5
-    python run_sweep.py --rank calmar --open
+    python core/run_sweep.py --symbols 300 --days 450
+    python core/run_sweep.py --top 3,5,8 --hold 5,10,20,40 --target 0,2.5
+    python core/run_sweep.py --rank calmar --open
 """
 
 from __future__ import annotations

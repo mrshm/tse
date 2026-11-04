@@ -2,9 +2,9 @@
 """ریسک ورشکستگی: با این اندازهٔ موقعیت، احتمال از دست دادن حساب چقدر است؟
 
 مثال:
-    python run_risk.py
-    python run_risk.py --risk 1 --win 45 --payoff 1.8 --stop 7 --trades 200
-    python run_risk.py --from-journal          # نرخ برد و R از دفتر معاملات
+    python core/run_risk.py
+    python core/run_risk.py --risk 1 --win 45 --payoff 1.8 --stop 7 --trades 200
+    python core/run_risk.py --from-journal          # نرخ برد و R از دفتر معاملات
 """
 
 from __future__ import annotations

@@ -4,10 +4,10 @@
 خروجی برای هر نماد: چند سهم، با چه قیمتی، حد ضرر کجا، هدف کجا، و کِی بفروش.
 
 مثال:
-    python run_scan.py                       # اول اسکن امروز
-    python run_plan.py                       # برگهٔ سفارش با ۱۰۰ میلیون تومان
-    python run_plan.py --capital 300 --positions 4 --risk 1.5
-    python run_plan.py --target-atr 0 --hold 20   # بدون هدف ثابت (طبق بک‌تست)
+    python core/run_scan.py                       # اول اسکن امروز
+    python core/run_plan.py                       # برگهٔ سفارش با ۱۰۰ میلیون تومان
+    python core/run_plan.py --capital 300 --positions 4 --risk 1.5
+    python core/run_plan.py --target-atr 0 --hold 20   # بدون هدف ثابت (طبق بک‌تست)
 """
 
 from __future__ import annotations
@@ -79,7 +79,7 @@ def main() -> int:
         src = ROOT / src
     if not src.exists():
         print(f"فایل {src} پیدا نشد. اول اسکنر را اجرا کنید:\n"
-              f"  {ROOT}/scan.sh", file=sys.stderr)
+              f"  ./tse.sh scan", file=sys.stderr)
         return 1
 
     payload = json.loads(src.read_text(encoding="utf-8"))
@@ -92,7 +92,7 @@ def main() -> int:
     today = datetime.now().strftime("%Y-%m-%d")
     if generated and generated != today:
         print(f"هشدار: خروجی اسکنر مربوط به {generated} است، نه امروز. "
-              f"برای قیمت‌های تازه اول «{ROOT}/scan.sh» را اجرا کنید.",
+              f"برای قیمت‌های تازه اول «./tse.sh scan» را اجرا کنید.",
               file=sys.stderr)
 
     cfg = PlanConfig(

@@ -2,10 +2,10 @@
 """بک‌تست استراتژی اسکنر روی تاریخچهٔ بورس تهران.
 
 مثال:
-    python run_backtest.py                       # ۴۰۰ روز، ۵ سهم، نگهداری ۵ روز
-    python run_backtest.py --days 700 --top 3
-    python run_backtest.py --max-hold 3 --target-atr 3
-    python run_backtest.py --symbols 250 --open  # فقط نقدشونده‌ترین‌ها (سریع‌تر)
+    python core/run_backtest.py                       # ۴۰۰ روز، ۵ سهم، نگهداری ۵ روز
+    python core/run_backtest.py --days 700 --top 3
+    python core/run_backtest.py --max-hold 3 --target-atr 3
+    python core/run_backtest.py --symbols 250 --open  # فقط نقدشونده‌ترین‌ها (سریع‌تر)
 """
 
 from __future__ import annotations

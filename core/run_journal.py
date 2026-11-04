@@ -2,10 +2,10 @@
 """دفتر معاملات: ثبت سفارش‌های برگه، پیگیری روزانه، و آمار واقعی.
 
 مثال:
-    python run_journal.py open                 # سفارش‌های plan_latest.json را ثبت کن
-    python run_journal.py status               # قیمت امروز، سود/زیان، هشدارها
-    python run_journal.py close سبهان --price 800 --reason هدف
-    python run_journal.py stats                # عملکرد واقعی بسته‌شده‌ها
+    python core/run_journal.py open                 # سفارش‌های plan_latest.json را ثبت کن
+    python core/run_journal.py status               # قیمت امروز، سود/زیان، هشدارها
+    python core/run_journal.py close سبهان --price 800 --reason هدف
+    python core/run_journal.py stats                # عملکرد واقعی بسته‌شده‌ها
 """
 
 from __future__ import annotations
@@ -106,7 +106,7 @@ def _fetch_quotes(workers: int) -> dict[str, float]:
 def cmd_status(args) -> int:
     journal = load(JOURNAL)
     if not journal["positions"]:
-        print("هیچ پوزیشن بازی نیست. اول: python run_journal.py open")
+        print("هیچ پوزیشن بازی نیست. اول: python core/run_journal.py open")
         return 0
 
     quotes = _fetch_quotes(args.workers)
@@ -158,7 +158,7 @@ def cmd_status(args) -> int:
     alerts = [r for r in rows if r["flags"]]
     if alerts:
         print(f"  ⚠ {len(alerts)} پوزیشن نیاز به اقدام دارد.")
-    print(f"  بستن یک پوزیشن: python run_journal.py close <نماد> --price <قیمت>")
+    print(f"  بستن یک پوزیشن: python core/run_journal.py close <نماد> --price <قیمت>")
     return 0
 
 

@@ -2,9 +2,9 @@
 """اسکن روزانه بورس تهران برای نوسان‌گیری کوتاه‌مدت.
 
 مثال:
-    python run_scan.py                     # اسکن کامل و ساخت داشبورد
-    python run_scan.py --top 60 --open
-    python run_scan.py --min-value 1.0     # حداقل ۱ میلیارد تومان ارزش معاملات روزانه
+    python core/run_scan.py                     # اسکن کامل و ساخت داشبورد
+    python core/run_scan.py --top 60 --open
+    python core/run_scan.py --min-value 1.0     # حداقل ۱ میلیارد تومان ارزش معاملات روزانه
 """
 
 from __future__ import annotations

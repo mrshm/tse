@@ -2,9 +2,9 @@
 """اعتبارسنجی راه‌رونده: پارامترها روی بازهٔ آموزش انتخاب، روی بازهٔ آزمون اجرا.
 
 مثال:
-    python run_walkforward.py
-    python run_walkforward.py --days 500 --train 150 --test 50 --rank calmar
-    python run_walkforward.py --symbols 300 --days 450 --open
+    python core/run_walkforward.py
+    python core/run_walkforward.py --days 500 --train 150 --test 50 --rank calmar
+    python core/run_walkforward.py --symbols 300 --days 450 --open
 """
 
 from __future__ import annotations

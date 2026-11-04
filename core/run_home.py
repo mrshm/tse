@@ -2,8 +2,8 @@
 """صفحهٔ یکپارچه: یک HTML با همهٔ ابزارها در یک جا.
 
 مثال:
-    python run_home.py            # ساخت index.html از آخرین خروجی‌ها
-    python run_home.py --open     # و بازکردن آن در مرورگر
+    python core/run_home.py            # ساخت index.html از آخرین خروجی‌ها
+    python core/run_home.py --open     # و بازکردن آن در مرورگر
 """
 
 from __future__ import annotations
